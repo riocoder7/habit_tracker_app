@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "surya_pro",
-    "slug": "surya_pro",
+    "name": "Habit Tracker",
+    "slug": "habits",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -12,22 +12,38 @@
       "supportsTablet": true
     },
     "android": {
+      "permissions": [
+        "NOTIFICATIONS",
+        "VIBRATE",
+        "INTERNET"
+      ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "notification": {
+        "icon": "./assets/images/logo.png",
+        "color": "#0000FF",
+        "sound": true,
+        "priority": "high",
+        "channelId": "default",
+        "channelName": "default",
+        "channelDescription": "Default notification channel",
+        "channelImportance": "default"
+      },
+      "package": "com.riocoder7.habits"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/logo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -36,6 +52,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "afcddc9c-6af2-47f5-90cb-ae9629f9cbb8"
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ export default function RootLayout() {
         }}
       />
       <StatusBar
-        style="dark-content"
+        style="dark"
         backgroundColor="transparent"
         translucent
       />
